@@ -4,30 +4,35 @@ class Game
     if hand1 == hand2
       return ['Niether', 'a Draw!']
     else
-      if hand1 == 'rock'
-        case
-        when hand2 == 'paper'
+
+      case hand1
+      when 'rock'
+        case hand2
+        when 'paper'
           return['Player 2', "#{hand2}"]
-        when hand2 == 'scissors'
+        when 'scissors'
           return ['Player 1', "#{hand1}"]
         end
 
-      elsif hand1 == 'paper'
-        case
-        when hand2 == 'rock'
+      when 'paper'
+        case hand2
+        when 'rock'
           return ['Player 1', "#{hand1}"]
-        when hand2 == 'scissors'
+        when 'scissors'
           return ['Player 2', "#{hand2}"]
         end
 
-      elsif hand1 == 'scissors'
-        case
-        when hand2 == 'rock'
+      when 'scissors'
+        case hand2
+        when 'rock'
           return ['Player 2', "#{hand2}"]
-        when hand2 == 'paper'
+        when 'paper'
           return ['player 1', "#{hand1}"]
         end
+
       end
+
     end
+
   end
 end
