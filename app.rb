@@ -10,3 +10,11 @@ get '/play/:hand1/:hand2' do
   @result = Game.play(hand1, hand2)
   erb(:result)
 end
+
+get '/' do
+  erb(:home)
+end
+
+get '/Rules' do
+  erb(:Rules)
+end
